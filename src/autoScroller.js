@@ -10,7 +10,6 @@ function AutoScroller() {
     const [scrollDistance, setScrollDistance] = useState("");
 
     function handleNewState(e) {
-        alert('A number was submitted: ' + scrollDistance);
         $('html, body').animate({ scrollTop: scrollDistance * MILES_TO_KM}, 800);
         e.preventDefault();
     }

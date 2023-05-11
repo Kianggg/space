@@ -9,6 +9,7 @@ import "./generate.js";
 import './index.css';
 import "typeface-gaegu";
 
+import { AutoScrollerFunction } from './autoScroller.js';
 import Space from './pages/space';
 import About from './pages/about';
 import Layout from './pages/layout';
@@ -20,7 +21,7 @@ export default function SpaceApp() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Space />} />
+          <Route index element={[<Space />, <AutoScrollerFunction/>]} />
           <Route path="about" element={<About />} />
           <Route path="*" element={<Missing />} />
         </Route>

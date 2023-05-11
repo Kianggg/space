@@ -7,6 +7,8 @@
   --navbar-color: #072347;
   --navbar-hover: #21416b;
   --navbar-height: 60px;
+
+  --span-height: 90px;
 }
 
 body {
@@ -20,6 +22,30 @@ body {
   background-repeat: repeat;
 
   text-align: center;
+
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+span {
+  display: block;
+
+  height: var(--span-height);
+  width: 80%;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  font-size: xx-large;
+}
+
+#contentContainer {
+  position: absolute;
+  z-index: 3;
 }
 
 #navbar {
@@ -44,10 +70,8 @@ body {
 }
 
 #navbar a {
-  line-height: var(--navbar-height);
   font-size: xx-large;
-  color: var(--font-color);
-  text-decoration: none;
+  line-height: var(--navbar-height);
 }
 
 #distanceTracker {
@@ -64,9 +88,144 @@ body {
   background-color: var(--navbar-color);
 
   position: sticky;
-  bottom: 10%;
+  bottom: 3%;
 }
 
 #distanceTracker:hover {
   border: solid 2px var(--navbar-hover);
+}
+
+/* AutoScroller */
+#autoScroller {
+  height: 100px;
+  width: 200px;
+
+  font-size: medium;
+  font-family: 'Gaegu', sans-serif;
+  color: var(--font-color);
+
+  position: sticky;
+  bottom: 0%;
+  left: 90%;
+}
+
+/* Space objects */
+/* Space objects */
+/* Space objects */
+
+#iss {
+  position: absolute;
+
+  top: 250px;
+  left: 6%;
+
+  padding-top: 200px;
+  height: 200px;
+  width: 200px;
+
+  background-image: url("./images/space_iss.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.astronaut {
+  height: 40px;
+  width: 40px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  background-image: url("./images/astronaut.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#hubble {
+  position: absolute;
+
+  top: 330px;
+  right: 6%;
+
+  padding-top: 200px;
+  height: 200px;
+  width: 200px;
+
+  background-image: url("./images/space_uchu_bouenkyou_bg.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#hubbleImage {
+  position: absolute;
+
+  top: 4000px;
+  left: 36%;
+
+  padding-top: 305px;
+  height: 293px;
+  width: 521px;
+
+  border-radius: 5px;
+
+  background-image: url("./images/hubble_picture.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#earth {
+  position: absolute;
+
+  font-size: medium;
+
+  top: 7926px;
+  left: 50%;
+
+  padding-top: 200px;
+  height: 200px;
+  width: 200px;
+
+  background-image: url("./images/earth.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+
+#geosync {
+  position: absolute;
+
+  font-size: medium;
+
+  top: 22991px;
+  left: 30%;
+
+  padding-top: 200px;
+  height: 200px;
+  width: 200px;
+
+  background-image: url("./images/satellite.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  animation: orbit 90s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes orbit {
+  0% {left: 5%}
+  100% {left: 80%}
+}
+
+#moon {
+  position: absolute;
+
+  bottom: 100%;
+
+  top: 239288px;
+
+  height: 450px;
+  width: 100%;
+
+  background-image: url("./images/bg_moon_getsumen.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
 }

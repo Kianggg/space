@@ -40,7 +40,7 @@ $( document ).ready(function() {
     });
 
     // Hubble Space Telescope
-    $("#mainContainer").append("<a id='hubble' href='https://en.wikipedia.org/wiki/International_Space_Station' target='_blank'>Hubble Space Telescope</>");
+    $("#mainContainer").append("<a id='hubble' href='https://en.wikipedia.org/wiki/Hubble_Space_Telescope' target='_blank'>Hubble Space Telescope</>");
 
     // About telescopes
     $("#20").text("We just saw the ISS and the Hubble Space Telescope. They have to be very close to the top in order to appear on this scale at all.")

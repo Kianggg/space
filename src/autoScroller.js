@@ -20,7 +20,6 @@ function AutoScroller() {
                 <label>
                     Kilometers to scroll to:<br/>
                     <input type="text" value={scrollDistance} onChange={(e) => setScrollDistance(e.target.value)} onKeyPress={(event) => {
-                        // Numbers only, thanks to Phat_Tran on StackExchange for this workaround!
                         if (!/[0-9]/.test(event.key)) {
                         event.preventDefault();
                         }
